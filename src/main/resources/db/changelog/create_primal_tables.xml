@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                   https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+
+    <changeSet id="create_primal_tables" author="pavlo_ponomarenko">
+        <createTable tableName="laptops">
+            <column name="id" type="bigint" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false" />
+            </column>
+            <column name="title" type="varchar(255)"/>
+            <column name="producer_name" type="varchar(255)"/>
+            <column name="processor" type="varchar(255)"/>
+            <column name="memory" type="varchar(255)"/>
+            <column name="optional_ports" type="varchar(255)"/>
+        </createTable>
+        <createTable tableName="producers">
+            <column name="name" type="varchar(255)">
+                <constraints primaryKey="true"/>
+            </column>
+        </createTable>
+        <addForeignKeyConstraint baseTableName="laptops"
+                                 baseColumnNames="producer_name"
+                                 constraintName="fk_laptop_producer"
+                                 referencedTableName="producers"
+                                 referencedColumnNames="name"
+                                 onDelete="CASCADE"/>
+    </changeSet>
+    <changeSet id="create_indexes" author="pavlo_ponomarenko">
+        <createIndex indexName="laptop_producer_name_index"
+                     tableName="laptops">
+            <column name="producer_name"/>
+        </createIndex>
+    </changeSet>
+</databaseChangeLog>
