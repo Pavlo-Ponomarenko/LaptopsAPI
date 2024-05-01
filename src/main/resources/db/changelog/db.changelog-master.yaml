@@ -1,3 +1,5 @@
 databaseChangeLog:
   - include:
       file: db/changelog/create_primal_tables.xml
+  - include:
+      file: db/changelog/init_db.xml
