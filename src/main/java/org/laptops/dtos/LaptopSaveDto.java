@@ -10,7 +10,7 @@ import lombok.Setter;
 @AllArgsConstructor
 @Setter
 @Getter
-public class LaptopDto {
+public class LaptopSaveDto {
 
     @NotBlank(message = "title is required")
     private String title;
@@ -20,5 +20,6 @@ public class LaptopDto {
     private String processor;
     @NotBlank(message = "memory is required")
     private String memory;
+    @NotBlank(message = "ports are required")
     private String optionalPorts;
 }

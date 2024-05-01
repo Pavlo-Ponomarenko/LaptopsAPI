@@ -1,6 +1,5 @@
 package org.laptops.dtos;
 
-import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -8,10 +7,9 @@ import lombok.Setter;
 
 @NoArgsConstructor
 @AllArgsConstructor
-@Setter
 @Getter
-public class ProducerDto {
+@Setter
+public class ProducerInfoDto {
 
-    @NotBlank(message = "name is required")
-    String name;
+    private String name;
 }
