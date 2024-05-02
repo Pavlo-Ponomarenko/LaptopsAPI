@@ -42,7 +42,6 @@ public class LaptopDataConverterImpl implements LaptopDataConverter {
         infoDto.setProducer(entity.getProducer().getName());
         infoDto.setProcessor(entity.getProcessor());
         infoDto.setMemory(entity.getMemory());
-        infoDto.setOptionalPorts(entity.getOptionalPorts());
         return infoDto;
     }
 }

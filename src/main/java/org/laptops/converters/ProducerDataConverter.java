@@ -7,5 +7,6 @@ import org.laptops.entities.Producer;
 public interface ProducerDataConverter {
 
     Producer saveDtoToEntity(ProducerSaveDto producerSaveDto);
+    Producer nameToEntity(String name);
     ProducerInfoDto entityToInfoDto(Producer entity);
 }

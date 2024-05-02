@@ -14,6 +14,11 @@ public class ProducerDataConverterImpl implements ProducerDataConverter {
     }
 
     @Override
+    public Producer nameToEntity(String name) {
+        return new Producer(name);
+    }
+
+    @Override
     public ProducerInfoDto entityToInfoDto(Producer entity) {
         return new ProducerInfoDto(entity.getName());
     }
