@@ -16,7 +16,7 @@ public class Laptop {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String title;
-    @ManyToOne(cascade = CascadeType.REMOVE)
+    @ManyToOne
     private Producer producer;
     private String processor;
     private String memory;

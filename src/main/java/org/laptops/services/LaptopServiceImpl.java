@@ -1,19 +1,25 @@
 package org.laptops.services;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+import jakarta.servlet.http.HttpServletResponse;
 import org.laptops.converters.LaptopDataConverter;
-import org.laptops.dtos.LaptopDetailsDto;
-import org.laptops.dtos.LaptopInfoDto;
-import org.laptops.dtos.LaptopSaveDto;
-import org.laptops.dtos.LaptopsSearchResultDto;
+import org.laptops.dtos.*;
 import org.laptops.entities.Laptop;
 import org.laptops.entities.Producer;
+import org.laptops.exceptions.BadRequestException;
+import org.laptops.exceptions.CSVFileGenerationFailedException;
 import org.laptops.exceptions.NotFoundException;
 import org.laptops.repositories.LaptopRepository;
+import org.laptops.services.csv.CSVGenerator;
+import org.laptops.services.json.JsonParser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.MediaType;
 import org.springframework.stereotype.Service;
 
+import java.io.IOException;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
@@ -27,12 +33,17 @@ public class LaptopServiceImpl implements LaptopService {
     private ProducerService producerService;
     @Autowired
     private LaptopDataConverter laptopDataConverter;
+    @Autowired
+    private CSVGenerator<LaptopInfoDto> csvGenerator;
+    @Autowired
+    private JsonParser jsonParser;
 
     @Override
-    public void create(LaptopSaveDto laptopSaveDto) {
+    public Long create(LaptopSaveDto laptopSaveDto) {
         Laptop entity = laptopDataConverter.saveDtoToEntity(laptopSaveDto);
         producerService.validateId(entity.getProducer().getName());
-        laptopRepository.save(entity);
+        Laptop savedEntity = laptopRepository.save(entity);
+        return savedEntity.getId();
     }
 
     @Override
@@ -68,6 +79,38 @@ public class LaptopServiceImpl implements LaptopService {
         Page<Laptop> result = laptopRepository.findAll(new LaptopSpecification(filters), request);
         List<LaptopInfoDto> dtoList = result.toList().stream().map(laptopDataConverter::entityToInfoDto).toList();
         return new LaptopsSearchResultDto(dtoList, result.getTotalPages());
+    }
+
+    @Override
+    public void generateReport(HttpServletResponse response, Map<String,Object> filters) {
+        response.setContentType(MediaType.APPLICATION_OCTET_STREAM_VALUE);
+        response.setHeader(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=laptops.csv");
+        List<Laptop> result = laptopRepository.findAll(new LaptopSpecification(filters));
+        List<LaptopInfoDto> dtoList = result.stream().map(laptopDataConverter::entityToInfoDto).toList();
+        byte[] generatedFile = csvGenerator.generateCSV(dtoList);
+        try {
+            response.getOutputStream().write(generatedFile);
+            response.getOutputStream().flush();
+        } catch (IOException e) {
+            throw new CSVFileGenerationFailedException();
+        }
+    }
+
+    @Override
+    public JsonUploadResultDto uploadFromFile(byte[] file) {
+        List<LaptopSaveDto> dtoList = jsonParser.parseBytesToList(file);
+        int successful = 0;
+        int unsuccessful = 0;
+        for (LaptopSaveDto dto : dtoList) {
+            try {
+                create(dto);
+            } catch(RuntimeException e) {
+                unsuccessful += 1;
+                continue;
+            }
+            successful += 1;
+        }
+        return new JsonUploadResultDto(successful, unsuccessful);
     }
 
     private void validateLaptopId(Long id) {
