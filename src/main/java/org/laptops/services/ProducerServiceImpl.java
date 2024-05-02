@@ -5,6 +5,7 @@ import org.laptops.dtos.ProducerInfoDto;
 import org.laptops.dtos.ProducerSaveDto;
 import org.laptops.entities.Producer;
 import org.laptops.exceptions.BadRequestException;
+import org.laptops.exceptions.NotFoundException;
 import org.laptops.repositories.ProducerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -53,7 +54,7 @@ public class ProducerServiceImpl implements ProducerService {
     @Override
     public void validateId(String id) {
         if (!producerRepository.existsById(id)) {
-            throw new BadRequestException("There is no producer with such id: " + id);
+            throw new NotFoundException("There is no producer with such id: " + id);
         }
     }
 }
