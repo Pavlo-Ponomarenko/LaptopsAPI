@@ -4,11 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="495a7f24-f9c4-4e20-95dc-eb5e0976bfaa" name="Changes" comment="implement services">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/laptops/controllers/ProducerController.java" afterDir="false" />
+    <list default="true" id="495a7f24-f9c4-4e20-95dc-eb5e0976bfaa" name="Changes" comment="implement controller for producers">
+      <change afterPath="$PROJECT_DIR$/DatasetForLoading.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/laptops/LaptopControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/laptops/ProducerControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/dataset.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/laptops/services/ProducerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/laptops/services/ProducerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/laptops/services/ProducerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/laptops/services/ProducerServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/laptops/dtos/RestResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/laptops/dtos/RestResponseDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/laptops/AppTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,40 +48,121 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/react/Desktop/JavaProject/LaptopsAPI/src/main/resources/db.changelog&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;0dd356cc47fdea57349742cd86cbfe50&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/react/Desktop/JavaProject/LaptopsAPI",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "spring.configuration.checksum": "0dd356cc47fdea57349742cd86cbfe50",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;postgresql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\react\Desktop\JavaProject\LaptopsAPI" />
       <recent name="C:\Users\react\Desktop\JavaProject\LaptopsAPI\src\main\resources\db.changelog" />
       <recent name="C:\Users\react\Desktop\JavaProject\LaptopsAPI\src\main\resources" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\react\Desktop\JavaProject\LaptopsAPI\src\test\resources" />
       <recent name="C:\Users\react\Desktop\JavaProject\LaptopsAPI\src\main\resources\db\changelog" />
     </key>
   </component>
-  <component name="RunManager" selected="JAR Application.Unnamed">
+  <component name="RunManager" selected="JUnit.ProducerControllerTest">
+    <configuration name="ProducerControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="LaptopsAPI" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.laptops.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.laptops" />
+      <option name="MAIN_CLASS_NAME" value="org.laptops.ProducerControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProducerControllerTest.testCreateProducer" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="LaptopsAPI" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.laptops.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.laptops" />
+      <option name="MAIN_CLASS_NAME" value="org.laptops.ProducerControllerTest" />
+      <option name="METHOD_NAME" value="testCreateProducer" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProducerControllerTest.testDeleteProducer" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="LaptopsAPI" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.laptops.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.laptops" />
+      <option name="MAIN_CLASS_NAME" value="org.laptops.ProducerControllerTest" />
+      <option name="METHOD_NAME" value="testDeleteProducer" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProducerControllerTest.testGetAllProducers" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="LaptopsAPI" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.laptops.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.laptops" />
+      <option name="MAIN_CLASS_NAME" value="org.laptops.ProducerControllerTest" />
+      <option name="METHOD_NAME" value="testGetAllProducers" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProducerControllerTest.testUpdateProducer" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="LaptopsAPI" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.laptops.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.laptops" />
+      <option name="MAIN_CLASS_NAME" value="org.laptops.ProducerControllerTest" />
+      <option name="METHOD_NAME" value="testUpdateProducer" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Unnamed" type="JarApplication" nameIsGenerated="true">
       <option name="JAR_PATH" value="$PROJECT_DIR$/target/LaptopsAPI-1.0-SNAPSHOT.jar" />
       <option name="WORKING_DIRECTORY" value="C:\Users\react\Desktop\JavaProject\LaptopsAPI" />
@@ -92,6 +176,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.ProducerControllerTest" />
+        <item itemvalue="JUnit.ProducerControllerTest.testDeleteProducer" />
+        <item itemvalue="JUnit.ProducerControllerTest.testUpdateProducer" />
+        <item itemvalue="JUnit.ProducerControllerTest.testGetAllProducers" />
+        <item itemvalue="JUnit.ProducerControllerTest.testCreateProducer" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -110,7 +203,7 @@
       <workItem from="1714396847676" duration="12783000" />
       <workItem from="1714467101185" duration="12837000" />
       <workItem from="1714549991554" duration="31851000" />
-      <workItem from="1714653867301" duration="12978000" />
+      <workItem from="1714653867301" duration="24862000" />
     </task>
     <task id="LOCAL-00001" summary="start project">
       <created>1714213300210</created>
@@ -182,7 +275,14 @@
       <option name="project" value="LOCAL" />
       <updated>1714666076687</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="implement controller for producers">
+      <created>1714669981292</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1714669981292</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -210,6 +310,7 @@
     <MESSAGE value="add exceptions handling" />
     <MESSAGE value="implement converters" />
     <MESSAGE value="implement services" />
-    <option name="LAST_COMMIT_MESSAGE" value="implement services" />
+    <MESSAGE value="implement controller for producers" />
+    <option name="LAST_COMMIT_MESSAGE" value="implement controller for producers" />
   </component>
 </project>

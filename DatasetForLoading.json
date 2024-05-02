@@ -1,0 +1,37 @@
+[
+  {
+    "title": "MacBook Pro",
+    "producer": "Apple",
+    "processor": "Apple M1 Pro",
+    "memory": "16GB DDR4",
+    "optional_ports": "Thunderbolt 4, USB 4, SDXC, card slot"
+  },
+  {
+    "title": "ThinkPad X1 Carbon",
+    "producer": "Lenovo",
+    "processor": "Intel Core i7-1185G7",
+    "memory": "16GB LPDDR4x",
+    "optional_ports": "HDMI, Thunderbolt 4, eSIM slot"
+  },
+  {
+    "title": "XPS 13",
+    "producer": "Dell",
+    "processor": "Intel Core i5-1135G7",
+    "memory": "8GB DDR4",
+    "optional_ports": "USB, Type-C, MicroSD, card reader"
+  },
+  {
+    "title": "ROG Zephyrus G14",
+    "producer": "Asus",
+    "processor": "AMD",
+    "memory": "32GB DDR4",
+    "optional_ports": "USB, Type-A, HDMI, 2.0b 3.5mm, audio jack"
+  },
+  {
+    "title": "Surface Laptop Studio",
+    "producer": "Microsoft",
+    "processor": "Intel Core i7-11800H",
+    "memory": "32GB LPDDR4x",
+    "optional_ports": "USB, Type-C, Surface Connect, port 3.5mm, audio jack"
+  }
+]
