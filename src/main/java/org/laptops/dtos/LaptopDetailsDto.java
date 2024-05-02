@@ -1,5 +1,6 @@
 package org.laptops.dtos;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -12,5 +13,6 @@ public class LaptopDetailsDto {
     private ProducerInfoDto producer;
     private String processor;
     private String memory;
+    @JsonProperty("optional_ports")
     private String optionalPorts;
 }

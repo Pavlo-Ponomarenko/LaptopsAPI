@@ -1,5 +1,6 @@
 package org.laptops.dtos;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -20,6 +21,7 @@ public class LaptopSaveDto {
     private String processor;
     @NotBlank(message = "memory is required")
     private String memory;
+    @JsonProperty("optional_ports")
     @NotBlank(message = "ports are required")
     private String optionalPorts;
 }
