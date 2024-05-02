@@ -4,30 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="495a7f24-f9c4-4e20-95dc-eb5e0976bfaa" name="Changes" comment="implement basic services and data structures">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/laptops/controllers/ApiExceptionsHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/laptops/controllers/LaptopController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/laptops/dtos/ErrorResponseDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/laptops/dtos/JsonUploadResultDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/laptops/dtos/LaptopFiltersDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/laptops/dtos/RestResponseDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/laptops/exceptions/CSVFileGenerationFailedException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/laptops/services/csv/CSVGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/laptops/services/csv/CSVGeneratorForLaptops.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/laptops/services/json/JsonParser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/laptops/services/json/JsonParserImpl.java" afterDir="false" />
+    <list default="true" id="495a7f24-f9c4-4e20-95dc-eb5e0976bfaa" name="Changes" comment="implement services">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/laptops/controllers/ProducerController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/laptops/converters/LaptopDataConverterImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/laptops/converters/LaptopDataConverterImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/laptops/converters/ProducerDataConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/laptops/converters/ProducerDataConverter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/laptops/converters/ProducerDataConverterImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/laptops/converters/ProducerDataConverterImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/laptops/dtos/LaptopDetailsDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/laptops/dtos/LaptopDetailsDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/laptops/dtos/LaptopInfoDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/laptops/dtos/LaptopInfoDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/laptops/dtos/LaptopSaveDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/laptops/dtos/LaptopSaveDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/laptops/dtos/LaptopSearchDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/laptops/dtos/LaptopSearchDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/laptops/entities/Laptop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/laptops/entities/Laptop.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/laptops/services/LaptopService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/laptops/services/LaptopService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/laptops/services/LaptopServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/laptops/services/LaptopServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/laptops/services/ProducerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/laptops/services/ProducerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/laptops/services/ProducerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/laptops/services/ProducerServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,7 +110,7 @@
       <workItem from="1714396847676" duration="12783000" />
       <workItem from="1714467101185" duration="12837000" />
       <workItem from="1714549991554" duration="31851000" />
-      <workItem from="1714653867301" duration="10123000" />
+      <workItem from="1714653867301" duration="12978000" />
     </task>
     <task id="LOCAL-00001" summary="start project">
       <created>1714213300210</created>
@@ -173,11 +154,50 @@
       <option name="project" value="LOCAL" />
       <updated>1714599365485</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="add dtos for endpoints">
+      <created>1714665855548</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1714665855548</updated>
+    </task>
+    <task id="LOCAL-00008" summary="add exceptions handling">
+      <created>1714665956333</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1714665956333</updated>
+    </task>
+    <task id="LOCAL-00009" summary="implement converters">
+      <created>1714666053295</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1714666053295</updated>
+    </task>
+    <task id="LOCAL-00010" summary="implement services">
+      <created>1714666076687</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1714666076687</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="start project" />
@@ -186,6 +206,10 @@
     <MESSAGE value="add liquibase scheme" />
     <MESSAGE value="add scheme for producers table initialization" />
     <MESSAGE value="implement basic services and data structures" />
-    <option name="LAST_COMMIT_MESSAGE" value="implement basic services and data structures" />
+    <MESSAGE value="add dtos for endpoints" />
+    <MESSAGE value="add exceptions handling" />
+    <MESSAGE value="implement converters" />
+    <MESSAGE value="implement services" />
+    <option name="LAST_COMMIT_MESSAGE" value="implement services" />
   </component>
 </project>

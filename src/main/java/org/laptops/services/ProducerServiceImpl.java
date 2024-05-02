@@ -9,6 +9,8 @@ import org.laptops.repositories.ProducerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class ProducerServiceImpl implements ProducerService {
 
@@ -39,10 +41,9 @@ public class ProducerServiceImpl implements ProducerService {
     }
 
     @Override
-    public ProducerInfoDto findById(String id) {
-        validateId(id);
-        Producer entity = producerRepository.findById(id).get();
-        return producerDataConverter.entityToInfoDto(entity);
+    public List<ProducerInfoDto> getALL() {
+        List<Producer> entities = producerRepository.findAll();
+        return entities.stream().map(producerDataConverter::entityToInfoDto).toList();
     }
 
     @Override
