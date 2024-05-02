@@ -24,6 +24,10 @@ import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
+/**
+ * Implementation of the LaptopService interface for managing laptop-related operations.
+ * @author Pavlo Ponomarenko
+ */
 @Service
 public class LaptopServiceImpl implements LaptopService {
 

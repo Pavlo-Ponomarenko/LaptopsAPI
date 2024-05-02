@@ -8,6 +8,10 @@ import org.laptops.entities.Laptop;
 import org.laptops.entities.Producer;
 import org.springframework.stereotype.Service;
 
+/**
+ * Implementation of the LaptopDataConverter interface for converting data between different representations of laptop information.
+ * @author Pavlo Ponomarenko
+ */
 @Service
 public class LaptopDataConverterImpl implements LaptopDataConverter {
 

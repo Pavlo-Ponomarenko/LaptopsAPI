@@ -5,6 +5,10 @@ import org.laptops.dtos.ProducerSaveDto;
 import org.laptops.entities.Producer;
 import org.springframework.stereotype.Service;
 
+/**
+ * Implementation of the ProducerDataConverter interface for converting data between different representations of producer information.
+ * @author Pavlo Ponomarenko
+ */
 @Service
 public class ProducerDataConverterImpl implements ProducerDataConverter {
 

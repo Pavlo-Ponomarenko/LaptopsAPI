@@ -12,6 +12,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * Specifications for building sql request with filter
+ * @author Pavlo Ponomarenko
+ */
 @AllArgsConstructor
 public class LaptopSpecification implements Specification<Laptop> {
 

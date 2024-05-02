@@ -4,14 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="495a7f24-f9c4-4e20-95dc-eb5e0976bfaa" name="Changes" comment="implement controller for producers">
-      <change afterPath="$PROJECT_DIR$/DatasetForLoading.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/laptops/LaptopControllerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/laptops/ProducerControllerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/dataset.json" afterDir="false" />
+    <list default="true" id="495a7f24-f9c4-4e20-95dc-eb5e0976bfaa" name="Changes" comment="write api-tests">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/laptops/dtos/RestResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/laptops/dtos/RestResponseDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/laptops/AppTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/laptops/converters/LaptopDataConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/laptops/converters/LaptopDataConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/laptops/converters/LaptopDataConverterImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/laptops/converters/LaptopDataConverterImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/laptops/converters/ProducerDataConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/laptops/converters/ProducerDataConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/laptops/converters/ProducerDataConverterImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/laptops/converters/ProducerDataConverterImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/laptops/services/LaptopService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/laptops/services/LaptopService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/laptops/services/LaptopServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/laptops/services/LaptopServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/laptops/services/LaptopSpecification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/laptops/services/LaptopSpecification.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/laptops/services/ProducerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/laptops/services/ProducerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/laptops/services/ProducerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/laptops/services/ProducerServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/laptops/services/csv/CSVGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/laptops/services/csv/CSVGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/laptops/services/csv/CSVGeneratorForLaptops.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/laptops/services/csv/CSVGeneratorForLaptops.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/laptops/services/json/JsonParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/laptops/services/json/JsonParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/laptops/services/json/JsonParserImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/laptops/services/json/JsonParserImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -203,7 +210,7 @@
       <workItem from="1714396847676" duration="12783000" />
       <workItem from="1714467101185" duration="12837000" />
       <workItem from="1714549991554" duration="31851000" />
-      <workItem from="1714653867301" duration="24862000" />
+      <workItem from="1714653867301" duration="26100000" />
     </task>
     <task id="LOCAL-00001" summary="start project">
       <created>1714213300210</created>
@@ -282,7 +289,14 @@
       <option name="project" value="LOCAL" />
       <updated>1714669981292</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="write api-tests">
+      <created>1714681560952</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1714681560952</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -311,6 +325,7 @@
     <MESSAGE value="implement converters" />
     <MESSAGE value="implement services" />
     <MESSAGE value="implement controller for producers" />
-    <option name="LAST_COMMIT_MESSAGE" value="implement controller for producers" />
+    <MESSAGE value="write api-tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="write api-tests" />
   </component>
 </project>

@@ -11,6 +11,10 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+/**
+ * Implementation of the ProducerService interface for managing producer-related operations.
+ * @author Pavlo Ponomarenko
+ */
 @Service
 public class ProducerServiceImpl implements ProducerService {
 

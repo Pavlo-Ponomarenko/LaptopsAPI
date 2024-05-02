@@ -9,6 +9,10 @@ import java.io.IOException;
 import java.io.OutputStreamWriter;
 import java.util.List;
 
+/**
+ * Implementation of the CSVGenerator interface for generating CSV files specifically for laptops.
+ * @author Pavlo Ponomarenko
+ */
 @Service
 public class CSVGeneratorForLaptops implements CSVGenerator<LaptopInfoDto> {
 

@@ -9,6 +9,10 @@ import org.springframework.stereotype.Service;
 import java.io.IOException;
 import java.util.List;
 
+/**
+ * Implementation of the JsonParser interface for parsing JSON data into a list of LaptopSaveDto objects.
+ * @autor Pavlo Ponomarenko
+ */
 @Service
 public class JsonParserImpl implements JsonParser {
 
